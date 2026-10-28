@@ -601,860 +601,982 @@ namespace Forms {
         void InitializeComponent(void)
 
         {
-
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+            System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
             this->panelTop = (gcnew System::Windows::Forms::Panel());
-
             this->panelTopRight = (gcnew System::Windows::Forms::Panel());
-
-            this->btnSignOut = (gcnew System::Windows::Forms::Button());
-
-            this->lblUserBadge = (gcnew System::Windows::Forms::Label());
-
-            this->cmbSemesterFilter = (gcnew System::Windows::Forms::ComboBox());
-
             this->lblFilterLabel = (gcnew System::Windows::Forms::Label());
-
+            this->cmbSemesterFilter = (gcnew System::Windows::Forms::ComboBox());
+            this->lblUserBadge = (gcnew System::Windows::Forms::Label());
+            this->btnSignOut = (gcnew System::Windows::Forms::Button());
             this->lblSystemCategory = (gcnew System::Windows::Forms::Label());
-
             this->lblAppTitle = (gcnew System::Windows::Forms::Label());
-
             this->panelSidebar = (gcnew System::Windows::Forms::Panel());
-
-            this->panelBrandLogo = (gcnew System::Windows::Forms::Panel());
-
-            this->lblNavHeader = (gcnew System::Windows::Forms::Label());
-
             this->btnNavDatabase = (gcnew System::Windows::Forms::Button());
-
             this->btnNavAudit = (gcnew System::Windows::Forms::Button());
-
             this->btnNavEvaluation = (gcnew System::Windows::Forms::Button());
-
             this->btnNavMilestones = (gcnew System::Windows::Forms::Button());
-
             this->btnNavScripts = (gcnew System::Windows::Forms::Button());
-
             this->btnNavOfferings = (gcnew System::Windows::Forms::Button());
-
             this->btnNavStaff = (gcnew System::Windows::Forms::Button());
-
             this->btnNavSemesters = (gcnew System::Windows::Forms::Button());
-
             this->btnNavAlerts = (gcnew System::Windows::Forms::Button());
-
             this->btnNavDashboard = (gcnew System::Windows::Forms::Button());
-
+            this->panelBrandLogo = (gcnew System::Windows::Forms::Panel());
+            this->lblNavHeader = (gcnew System::Windows::Forms::Label());
             this->panelMainContent = (gcnew System::Windows::Forms::Panel());
-
             this->tabModules = (gcnew System::Windows::Forms::TabControl());
-
-
-
             this->tabDashboard = (gcnew System::Windows::Forms::TabPage());
-
+            this->tlpStats = (gcnew System::Windows::Forms::TableLayoutPanel());
+            this->pnlStat1 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat1 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle1 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal1 = (gcnew System::Windows::Forms::Label());
+            this->pnlStat2 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat2 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle2 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal2 = (gcnew System::Windows::Forms::Label());
+            this->pnlStat3 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat3 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle3 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal3 = (gcnew System::Windows::Forms::Label());
+            this->pnlStat4 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat4 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle4 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal4 = (gcnew System::Windows::Forms::Label());
+            this->pnlStat5 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat5 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle5 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal5 = (gcnew System::Windows::Forms::Label());
+            this->pnlStat6 = (gcnew System::Windows::Forms::Panel());
+            this->stripStat6 = (gcnew System::Windows::Forms::Panel());
+            this->lblStatTitle6 = (gcnew System::Windows::Forms::Label());
+            this->lblStatVal6 = (gcnew System::Windows::Forms::Label());
+            this->lblDashboardTableTitle = (gcnew System::Windows::Forms::Label());
+            this->dgvDashboardOverview = (gcnew System::Windows::Forms::DataGridView());
             this->tabAlerts = (gcnew System::Windows::Forms::TabPage());
-
             this->tabSemestersCourses = (gcnew System::Windows::Forms::TabPage());
-
             this->tabStaff = (gcnew System::Windows::Forms::TabPage());
-
             this->tabOfferings = (gcnew System::Windows::Forms::TabPage());
-
             this->tabScripts = (gcnew System::Windows::Forms::TabPage());
-
             this->tabMilestones = (gcnew System::Windows::Forms::TabPage());
-
             this->tabEvaluation = (gcnew System::Windows::Forms::TabPage());
-
             this->tabAudit = (gcnew System::Windows::Forms::TabPage());
-
             this->tabDatabase = (gcnew System::Windows::Forms::TabPage());
-
-
-
             this->panelTop->SuspendLayout();
-
             this->panelTopRight->SuspendLayout();
-
             this->panelSidebar->SuspendLayout();
-
             this->panelBrandLogo->SuspendLayout();
-
             this->panelMainContent->SuspendLayout();
-
             this->tabModules->SuspendLayout();
-
+            this->tabDashboard->SuspendLayout();
+            this->tlpStats->SuspendLayout();
+            this->pnlStat1->SuspendLayout();
+            this->pnlStat2->SuspendLayout();
+            this->pnlStat3->SuspendLayout();
+            this->pnlStat4->SuspendLayout();
+            this->pnlStat5->SuspendLayout();
+            this->pnlStat6->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvDashboardOverview))->BeginInit();
             this->SuspendLayout();
-
-
-
-            this->panelTop->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
-
+            // 
+            // panelTop
+            // 
+            this->panelTop->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
             this->panelTop->Controls->Add(this->panelTopRight);
-
             this->panelTop->Controls->Add(this->lblSystemCategory);
-
             this->panelTop->Controls->Add(this->lblAppTitle);
-
             this->panelTop->Dock = System::Windows::Forms::DockStyle::Top;
-
             this->panelTop->Location = System::Drawing::Point(0, 0);
-
             this->panelTop->Name = L"panelTop";
-
             this->panelTop->Padding = System::Windows::Forms::Padding(20, 10, 20, 10);
-
             this->panelTop->Size = System::Drawing::Size(1280, 68);
-
             this->panelTop->TabIndex = 0;
-
-
-
-            this->lblSystemCategory->AutoSize = true;
-
-            this->lblSystemCategory->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 7.5F, System::Drawing::FontStyle::Bold));
-
-            this->lblSystemCategory->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(56)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(189)), static_cast<System::Int32>(static_cast<System::Byte>(248)));
-
-            this->lblSystemCategory->Location = System::Drawing::Point(22, 12);
-
-            this->lblSystemCategory->Name = L"lblSystemCategory";
-
-            this->lblSystemCategory->Text = L"UNIVERSITY EXAMINATION BRANCH MONITORING SYSTEM";
-
-
-
-            this->lblAppTitle->AutoSize = true;
-
-            this->lblAppTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 13.5F, System::Drawing::FontStyle::Bold));
-
-            this->lblAppTitle->ForeColor = System::Drawing::Color::White;
-
-            this->lblAppTitle->Location = System::Drawing::Point(20, 28);
-
-            this->lblAppTitle->Name = L"lblAppTitle";
-
-            this->lblAppTitle->Size = System::Drawing::Size(370, 25);
-
-            this->lblAppTitle->Text = L"Results Monitoring & Governance Suite";
-
-
-
+            // 
+            // panelTopRight
+            // 
             this->panelTopRight->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Right));
-
             this->panelTopRight->Controls->Add(this->lblFilterLabel);
-
             this->panelTopRight->Controls->Add(this->cmbSemesterFilter);
-
             this->panelTopRight->Controls->Add(this->lblUserBadge);
-
             this->panelTopRight->Controls->Add(this->btnSignOut);
-
             this->panelTopRight->Location = System::Drawing::Point(540, 10);
-
             this->panelTopRight->Name = L"panelTopRight";
-
             this->panelTopRight->Size = System::Drawing::Size(720, 48);
-
             this->panelTopRight->TabIndex = 3;
-
-
-
+            // 
+            // lblFilterLabel
+            // 
             this->lblFilterLabel->AutoSize = true;
-
-            this->lblFilterLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.0F));
-
-            this->lblFilterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(213)), static_cast<System::Int32>(static_cast<System::Byte>(225)));
-
+            this->lblFilterLabel->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+            this->lblFilterLabel->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(203)), static_cast<System::Int32>(static_cast<System::Byte>(213)),
+                static_cast<System::Int32>(static_cast<System::Byte>(225)));
             this->lblFilterLabel->Location = System::Drawing::Point(8, 16);
-
+            this->lblFilterLabel->Name = L"lblFilterLabel";
+            this->lblFilterLabel->Size = System::Drawing::Size(118, 20);
+            this->lblFilterLabel->TabIndex = 0;
             this->lblFilterLabel->Text = L"Active Semester:";
-
-
-
+            // 
+            // cmbSemesterFilter
+            // 
             this->cmbSemesterFilter->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-
-            this->cmbSemesterFilter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.0F));
-
+            this->cmbSemesterFilter->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
             this->cmbSemesterFilter->FormattingEnabled = true;
-
+            this->cmbSemesterFilter->Items->AddRange(gcnew cli::array< System::Object^  >(1) { L"All Semesters" });
             this->cmbSemesterFilter->Location = System::Drawing::Point(108, 12);
-
-            this->cmbSemesterFilter->Size = System::Drawing::Size(145, 23);
-
-            this->cmbSemesterFilter->Items->Add(L"All Semesters");
-
-            this->cmbSemesterFilter->Text = L"All Semesters";
-
+            this->cmbSemesterFilter->Name = L"cmbSemesterFilter";
+            this->cmbSemesterFilter->Size = System::Drawing::Size(145, 28);
+            this->cmbSemesterFilter->TabIndex = 1;
             this->cmbSemesterFilter->SelectedIndexChanged += gcnew System::EventHandler(this, &MainForm::cmbSemesterFilter_SelectedIndexChanged);
-
-
-
-            this->lblUserBadge->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(59)));
-
+            // 
+            // lblUserBadge
+            // 
+            this->lblUserBadge->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+                static_cast<System::Int32>(static_cast<System::Byte>(59)));
             this->lblUserBadge->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-
-            this->lblUserBadge->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.0F, System::Drawing::FontStyle::Bold));
-
-            this->lblUserBadge->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(56)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(189)), static_cast<System::Int32>(static_cast<System::Byte>(248)));
-
+            this->lblUserBadge->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold));
+            this->lblUserBadge->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(56)), static_cast<System::Int32>(static_cast<System::Byte>(189)),
+                static_cast<System::Int32>(static_cast<System::Byte>(248)));
             this->lblUserBadge->Location = System::Drawing::Point(265, 8);
-
+            this->lblUserBadge->Name = L"lblUserBadge";
             this->lblUserBadge->Padding = System::Windows::Forms::Padding(10, 4, 10, 4);
-
             this->lblUserBadge->Size = System::Drawing::Size(340, 32);
-
+            this->lblUserBadge->TabIndex = 2;
             this->lblUserBadge->Text = L"System Administrator | All Access";
-
             this->lblUserBadge->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-
-
-
-            this->btnSignOut->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(220)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(38)), static_cast<System::Int32>(static_cast<System::Byte>(38)));
-
+            // 
+            // btnSignOut
+            // 
+            this->btnSignOut->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(220)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
+                static_cast<System::Int32>(static_cast<System::Byte>(38)));
             this->btnSignOut->Cursor = System::Windows::Forms::Cursors::Hand;
-
             this->btnSignOut->FlatAppearance->BorderSize = 0;
-
-            this->btnSignOut->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(185)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)));
-
             this->btnSignOut->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(153)),
-
                 static_cast<System::Int32>(static_cast<System::Byte>(27)), static_cast<System::Int32>(static_cast<System::Byte>(27)));
-
+            this->btnSignOut->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(185)),
+                static_cast<System::Int32>(static_cast<System::Byte>(28)), static_cast<System::Int32>(static_cast<System::Byte>(28)));
             this->btnSignOut->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-
-            this->btnSignOut->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.0F, System::Drawing::FontStyle::Bold));
-
+            this->btnSignOut->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9, System::Drawing::FontStyle::Bold));
             this->btnSignOut->ForeColor = System::Drawing::Color::White;
-
             this->btnSignOut->Location = System::Drawing::Point(618, 8);
-
+            this->btnSignOut->Name = L"btnSignOut";
             this->btnSignOut->Size = System::Drawing::Size(95, 32);
-
+            this->btnSignOut->TabIndex = 3;
             this->btnSignOut->Text = L"Sign Out";
-
             this->btnSignOut->UseVisualStyleBackColor = false;
-
             this->btnSignOut->Click += gcnew System::EventHandler(this, &MainForm::btnSignOut_Click);
-
-
-
-            this->panelSidebar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(41)), static_cast<System::Int32>(static_cast<System::Byte>(59)));
-
+            // 
+            // lblSystemCategory
+            // 
+            this->lblSystemCategory->AutoSize = true;
+            this->lblSystemCategory->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 7.5F, System::Drawing::FontStyle::Bold));
+            this->lblSystemCategory->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(56)),
+                static_cast<System::Int32>(static_cast<System::Byte>(189)), static_cast<System::Int32>(static_cast<System::Byte>(248)));
+            this->lblSystemCategory->Location = System::Drawing::Point(22, 12);
+            this->lblSystemCategory->Name = L"lblSystemCategory";
+            this->lblSystemCategory->Size = System::Drawing::Size(369, 17);
+            this->lblSystemCategory->TabIndex = 4;
+            this->lblSystemCategory->Text = L"UNIVERSITY EXAMINATION BRANCH MONITORING SYSTEM";
+            // 
+            // lblAppTitle
+            // 
+            this->lblAppTitle->AutoSize = true;
+            this->lblAppTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 13.5F, System::Drawing::FontStyle::Bold));
+            this->lblAppTitle->ForeColor = System::Drawing::Color::White;
+            this->lblAppTitle->Location = System::Drawing::Point(20, 28);
+            this->lblAppTitle->Name = L"lblAppTitle";
+            this->lblAppTitle->Size = System::Drawing::Size(404, 31);
+            this->lblAppTitle->TabIndex = 5;
+            this->lblAppTitle->Text = L"Results Monitoring & Governance Suite";
+            // 
+            // panelSidebar
+            // 
+            this->panelSidebar->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(30)), static_cast<System::Int32>(static_cast<System::Byte>(41)),
+                static_cast<System::Int32>(static_cast<System::Byte>(59)));
             this->panelSidebar->Controls->Add(this->btnNavDatabase);
-
             this->panelSidebar->Controls->Add(this->btnNavAudit);
-
             this->panelSidebar->Controls->Add(this->btnNavEvaluation);
-
             this->panelSidebar->Controls->Add(this->btnNavMilestones);
-
             this->panelSidebar->Controls->Add(this->btnNavScripts);
-
             this->panelSidebar->Controls->Add(this->btnNavOfferings);
-
             this->panelSidebar->Controls->Add(this->btnNavStaff);
-
             this->panelSidebar->Controls->Add(this->btnNavSemesters);
-
             this->panelSidebar->Controls->Add(this->btnNavAlerts);
-
             this->panelSidebar->Controls->Add(this->btnNavDashboard);
-
             this->panelSidebar->Controls->Add(this->panelBrandLogo);
-
             this->panelSidebar->Dock = System::Windows::Forms::DockStyle::Left;
-
             this->panelSidebar->Location = System::Drawing::Point(0, 68);
-
             this->panelSidebar->Name = L"panelSidebar";
-
             this->panelSidebar->Size = System::Drawing::Size(245, 732);
-
             this->panelSidebar->TabIndex = 1;
-
-
-
-            this->panelBrandLogo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
-
-            this->panelBrandLogo->Controls->Add(this->lblNavHeader);
-
-            this->panelBrandLogo->Dock = System::Windows::Forms::DockStyle::Top;
-
-            this->panelBrandLogo->Location = System::Drawing::Point(0, 0);
-
-            this->panelBrandLogo->Name = L"panelBrandLogo";
-
-            this->panelBrandLogo->Padding = System::Windows::Forms::Padding(14, 10, 14, 10);
-
-            this->panelBrandLogo->Size = System::Drawing::Size(245, 42);
-
-            this->panelBrandLogo->TabIndex = 10;
-
-
-
-            this->lblNavHeader->AutoSize = true;
-
-            this->lblNavHeader->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold));
-
-            this->lblNavHeader->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(148)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(163)), static_cast<System::Int32>(static_cast<System::Byte>(184)));
-
-            this->lblNavHeader->Location = System::Drawing::Point(14, 14);
-
-            this->lblNavHeader->Text = L"SYSTEM MODULES & WORKFLOWS";
-
-
-
-            this->btnNavDashboard->BackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavDashboard->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavDashboard->FlatAppearance->BorderSize = 0;
-            this->btnNavDashboard->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavDashboard->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavDashboard->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavDashboard->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavDashboard->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavDashboard->Location = System::Drawing::Point(0, 50);
-            this->btnNavDashboard->Name = L"btnNavDashboard";
-            this->btnNavDashboard->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavDashboard->Size = System::Drawing::Size(245, 42);
-            this->btnNavDashboard->TabIndex = 0;
-            this->btnNavDashboard->Tag = (System::Object^)0;
-            this->btnNavDashboard->Text = L"  1. Executive Dashboard";
-            this->btnNavDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavDashboard->UseVisualStyleBackColor = false;
-            this->btnNavDashboard->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavAlerts->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavAlerts->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavAlerts->FlatAppearance->BorderSize = 0;
-            this->btnNavAlerts->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavAlerts->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavAlerts->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavAlerts->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavAlerts->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavAlerts->Location = System::Drawing::Point(0, 96);
-            this->btnNavAlerts->Name = L"btnNavAlerts";
-            this->btnNavAlerts->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavAlerts->Size = System::Drawing::Size(245, 42);
-            this->btnNavAlerts->TabIndex = 1;
-            this->btnNavAlerts->Tag = (System::Object^)1;
-            this->btnNavAlerts->Text = L"  2. Overdue Alerts (Deadlines)";
-            this->btnNavAlerts->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavAlerts->UseVisualStyleBackColor = false;
-            this->btnNavAlerts->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavSemesters->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavSemesters->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavSemesters->FlatAppearance->BorderSize = 0;
-            this->btnNavSemesters->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavSemesters->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavSemesters->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavSemesters->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavSemesters->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavSemesters->Location = System::Drawing::Point(0, 142);
-            this->btnNavSemesters->Name = L"btnNavSemesters";
-            this->btnNavSemesters->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavSemesters->Size = System::Drawing::Size(245, 42);
-            this->btnNavSemesters->TabIndex = 2;
-            this->btnNavSemesters->Tag = (System::Object^)2;
-            this->btnNavSemesters->Text = L"  3. Semesters & Courses";
-            this->btnNavSemesters->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavSemesters->UseVisualStyleBackColor = false;
-            this->btnNavSemesters->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavStaff->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavStaff->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavStaff->FlatAppearance->BorderSize = 0;
-            this->btnNavStaff->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavStaff->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavStaff->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavStaff->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavStaff->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavStaff->Location = System::Drawing::Point(0, 188);
-            this->btnNavStaff->Name = L"btnNavStaff";
-            this->btnNavStaff->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavStaff->Size = System::Drawing::Size(245, 42);
-            this->btnNavStaff->TabIndex = 3;
-            this->btnNavStaff->Tag = (System::Object^)3;
-            this->btnNavStaff->Text = L"  4. Staff Directory & Workload";
-            this->btnNavStaff->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavStaff->UseVisualStyleBackColor = false;
-            this->btnNavStaff->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavOfferings->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavOfferings->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavOfferings->FlatAppearance->BorderSize = 0;
-            this->btnNavOfferings->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavOfferings->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavOfferings->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavOfferings->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavOfferings->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavOfferings->Location = System::Drawing::Point(0, 234);
-            this->btnNavOfferings->Name = L"btnNavOfferings";
-            this->btnNavOfferings->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavOfferings->Size = System::Drawing::Size(245, 42);
-            this->btnNavOfferings->TabIndex = 4;
-            this->btnNavOfferings->Tag = (System::Object^)4;
-            this->btnNavOfferings->Text = L"  5. Offerings & Allocation";
-            this->btnNavOfferings->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavOfferings->UseVisualStyleBackColor = false;
-            this->btnNavOfferings->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavScripts->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavScripts->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavScripts->FlatAppearance->BorderSize = 0;
-            this->btnNavScripts->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavScripts->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavScripts->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavScripts->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavScripts->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavScripts->Location = System::Drawing::Point(0, 280);
-            this->btnNavScripts->Name = L"btnNavScripts";
-            this->btnNavScripts->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavScripts->Size = System::Drawing::Size(245, 42);
-            this->btnNavScripts->TabIndex = 5;
-            this->btnNavScripts->Tag = (System::Object^)5;
-            this->btnNavScripts->Text = L"  6. Answer Script Tracking";
-            this->btnNavScripts->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavScripts->UseVisualStyleBackColor = false;
-            this->btnNavScripts->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavMilestones->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavMilestones->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavMilestones->FlatAppearance->BorderSize = 0;
-            this->btnNavMilestones->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavMilestones->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavMilestones->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavMilestones->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavMilestones->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavMilestones->Location = System::Drawing::Point(0, 326);
-            this->btnNavMilestones->Name = L"btnNavMilestones";
-            this->btnNavMilestones->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavMilestones->Size = System::Drawing::Size(245, 42);
-            this->btnNavMilestones->TabIndex = 6;
-            this->btnNavMilestones->Tag = (System::Object^)6;
-            this->btnNavMilestones->Text = L"  7. Grading Milestones";
-            this->btnNavMilestones->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavMilestones->UseVisualStyleBackColor = false;
-            this->btnNavMilestones->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavEvaluation->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavEvaluation->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavEvaluation->FlatAppearance->BorderSize = 0;
-            this->btnNavEvaluation->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavEvaluation->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavEvaluation->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavEvaluation->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavEvaluation->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavEvaluation->Location = System::Drawing::Point(0, 372);
-            this->btnNavEvaluation->Name = L"btnNavEvaluation";
-            this->btnNavEvaluation->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavEvaluation->Size = System::Drawing::Size(245, 42);
-            this->btnNavEvaluation->TabIndex = 7;
-            this->btnNavEvaluation->Tag = (System::Object^)7;
-            this->btnNavEvaluation->Text = L"  8. CA & Exam Marks (100%)";
-            this->btnNavEvaluation->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavEvaluation->UseVisualStyleBackColor = false;
-            this->btnNavEvaluation->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-            this->btnNavAudit->BackColor = System::Drawing::Color::Transparent;
-            this->btnNavAudit->Cursor = System::Windows::Forms::Cursors::Hand;
-            this->btnNavAudit->FlatAppearance->BorderSize = 0;
-            this->btnNavAudit->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavAudit->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
-            this->btnNavAudit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-            this->btnNavAudit->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavAudit->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->btnNavAudit->Location = System::Drawing::Point(0, 418);
-            this->btnNavAudit->Name = L"btnNavAudit";
-            this->btnNavAudit->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
-            this->btnNavAudit->Size = System::Drawing::Size(245, 42);
-            this->btnNavAudit->TabIndex = 8;
-            this->btnNavAudit->Tag = (System::Object^)8;
-            this->btnNavAudit->Text = L"  9. Immutable Audit Trail";
-            this->btnNavAudit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-            this->btnNavAudit->UseVisualStyleBackColor = false;
-            this->btnNavAudit->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
+            // 
+            // btnNavDatabase
+            // 
             this->btnNavDatabase->BackColor = System::Drawing::Color::Transparent;
             this->btnNavDatabase->Cursor = System::Windows::Forms::Cursors::Hand;
             this->btnNavDatabase->FlatAppearance->BorderSize = 0;
-            this->btnNavDatabase->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->btnNavDatabase->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(51, 65, 85);
+            this->btnNavDatabase->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavDatabase->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
             this->btnNavDatabase->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
             this->btnNavDatabase->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
-            this->btnNavDatabase->ForeColor = System::Drawing::Color::FromArgb(226, 232, 240);
+            this->btnNavDatabase->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
             this->btnNavDatabase->Location = System::Drawing::Point(0, 464);
             this->btnNavDatabase->Name = L"btnNavDatabase";
             this->btnNavDatabase->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
             this->btnNavDatabase->Size = System::Drawing::Size(245, 42);
             this->btnNavDatabase->TabIndex = 9;
-            this->btnNavDatabase->Tag = (System::Object^)9;
+            this->btnNavDatabase->Tag = 9;
             this->btnNavDatabase->Text = L" 10. Database & SQL Tools";
             this->btnNavDatabase->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             this->btnNavDatabase->UseVisualStyleBackColor = false;
             this->btnNavDatabase->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
-
-
-
+            // 
+            // btnNavAudit
+            // 
+            this->btnNavAudit->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavAudit->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavAudit->FlatAppearance->BorderSize = 0;
+            this->btnNavAudit->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavAudit->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavAudit->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavAudit->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavAudit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavAudit->Location = System::Drawing::Point(0, 418);
+            this->btnNavAudit->Name = L"btnNavAudit";
+            this->btnNavAudit->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavAudit->Size = System::Drawing::Size(245, 42);
+            this->btnNavAudit->TabIndex = 8;
+            this->btnNavAudit->Tag = 8;
+            this->btnNavAudit->Text = L"  9. Immutable Audit Trail";
+            this->btnNavAudit->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavAudit->UseVisualStyleBackColor = false;
+            this->btnNavAudit->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavEvaluation
+            // 
+            this->btnNavEvaluation->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavEvaluation->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavEvaluation->FlatAppearance->BorderSize = 0;
+            this->btnNavEvaluation->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavEvaluation->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavEvaluation->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavEvaluation->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavEvaluation->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+                static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavEvaluation->Location = System::Drawing::Point(0, 372);
+            this->btnNavEvaluation->Name = L"btnNavEvaluation";
+            this->btnNavEvaluation->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavEvaluation->Size = System::Drawing::Size(245, 42);
+            this->btnNavEvaluation->TabIndex = 7;
+            this->btnNavEvaluation->Tag = 7;
+            this->btnNavEvaluation->Text = L"  8. CA & Exam Marks (100%)";
+            this->btnNavEvaluation->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavEvaluation->UseVisualStyleBackColor = false;
+            this->btnNavEvaluation->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavMilestones
+            // 
+            this->btnNavMilestones->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavMilestones->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavMilestones->FlatAppearance->BorderSize = 0;
+            this->btnNavMilestones->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavMilestones->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavMilestones->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavMilestones->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavMilestones->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+                static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavMilestones->Location = System::Drawing::Point(0, 326);
+            this->btnNavMilestones->Name = L"btnNavMilestones";
+            this->btnNavMilestones->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavMilestones->Size = System::Drawing::Size(245, 42);
+            this->btnNavMilestones->TabIndex = 6;
+            this->btnNavMilestones->Tag = 6;
+            this->btnNavMilestones->Text = L"  7. Grading Milestones";
+            this->btnNavMilestones->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavMilestones->UseVisualStyleBackColor = false;
+            this->btnNavMilestones->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavScripts
+            // 
+            this->btnNavScripts->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavScripts->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavScripts->FlatAppearance->BorderSize = 0;
+            this->btnNavScripts->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavScripts->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavScripts->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavScripts->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavScripts->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavScripts->Location = System::Drawing::Point(0, 280);
+            this->btnNavScripts->Name = L"btnNavScripts";
+            this->btnNavScripts->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavScripts->Size = System::Drawing::Size(245, 42);
+            this->btnNavScripts->TabIndex = 5;
+            this->btnNavScripts->Tag = 5;
+            this->btnNavScripts->Text = L"  6. Answer Script Tracking";
+            this->btnNavScripts->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavScripts->UseVisualStyleBackColor = false;
+            this->btnNavScripts->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavOfferings
+            // 
+            this->btnNavOfferings->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavOfferings->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavOfferings->FlatAppearance->BorderSize = 0;
+            this->btnNavOfferings->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavOfferings->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavOfferings->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavOfferings->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavOfferings->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavOfferings->Location = System::Drawing::Point(0, 234);
+            this->btnNavOfferings->Name = L"btnNavOfferings";
+            this->btnNavOfferings->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavOfferings->Size = System::Drawing::Size(245, 42);
+            this->btnNavOfferings->TabIndex = 4;
+            this->btnNavOfferings->Tag = 4;
+            this->btnNavOfferings->Text = L"  5. Offerings & Allocation";
+            this->btnNavOfferings->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavOfferings->UseVisualStyleBackColor = false;
+            this->btnNavOfferings->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavStaff
+            // 
+            this->btnNavStaff->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavStaff->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavStaff->FlatAppearance->BorderSize = 0;
+            this->btnNavStaff->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavStaff->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavStaff->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavStaff->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavStaff->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavStaff->Location = System::Drawing::Point(0, 188);
+            this->btnNavStaff->Name = L"btnNavStaff";
+            this->btnNavStaff->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavStaff->Size = System::Drawing::Size(245, 42);
+            this->btnNavStaff->TabIndex = 3;
+            this->btnNavStaff->Tag = 3;
+            this->btnNavStaff->Text = L"  4. Staff Directory & Workload";
+            this->btnNavStaff->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavStaff->UseVisualStyleBackColor = false;
+            this->btnNavStaff->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavSemesters
+            // 
+            this->btnNavSemesters->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavSemesters->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavSemesters->FlatAppearance->BorderSize = 0;
+            this->btnNavSemesters->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavSemesters->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavSemesters->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavSemesters->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavSemesters->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavSemesters->Location = System::Drawing::Point(0, 142);
+            this->btnNavSemesters->Name = L"btnNavSemesters";
+            this->btnNavSemesters->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavSemesters->Size = System::Drawing::Size(245, 42);
+            this->btnNavSemesters->TabIndex = 2;
+            this->btnNavSemesters->Tag = 2;
+            this->btnNavSemesters->Text = L"  3. Semesters & Courses";
+            this->btnNavSemesters->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavSemesters->UseVisualStyleBackColor = false;
+            this->btnNavSemesters->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavAlerts
+            // 
+            this->btnNavAlerts->BackColor = System::Drawing::Color::Transparent;
+            this->btnNavAlerts->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavAlerts->FlatAppearance->BorderSize = 0;
+            this->btnNavAlerts->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavAlerts->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavAlerts->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavAlerts->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavAlerts->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavAlerts->Location = System::Drawing::Point(0, 96);
+            this->btnNavAlerts->Name = L"btnNavAlerts";
+            this->btnNavAlerts->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavAlerts->Size = System::Drawing::Size(245, 42);
+            this->btnNavAlerts->TabIndex = 1;
+            this->btnNavAlerts->Tag = 1;
+            this->btnNavAlerts->Text = L"  2. Overdue Alerts (Deadlines)";
+            this->btnNavAlerts->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavAlerts->UseVisualStyleBackColor = false;
+            this->btnNavAlerts->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // btnNavDashboard
+            // 
+            this->btnNavDashboard->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)), static_cast<System::Int32>(static_cast<System::Byte>(65)),
+                static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavDashboard->Cursor = System::Windows::Forms::Cursors::Hand;
+            this->btnNavDashboard->FlatAppearance->BorderSize = 0;
+            this->btnNavDashboard->FlatAppearance->MouseDownBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->btnNavDashboard->FlatAppearance->MouseOverBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(65)), static_cast<System::Int32>(static_cast<System::Byte>(85)));
+            this->btnNavDashboard->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+            this->btnNavDashboard->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            this->btnNavDashboard->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)), static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->btnNavDashboard->Location = System::Drawing::Point(0, 50);
+            this->btnNavDashboard->Name = L"btnNavDashboard";
+            this->btnNavDashboard->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
+            this->btnNavDashboard->Size = System::Drawing::Size(245, 42);
+            this->btnNavDashboard->TabIndex = 0;
+            this->btnNavDashboard->Tag = 0;
+            this->btnNavDashboard->Text = L"  1. Executive Dashboard";
+            this->btnNavDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+            this->btnNavDashboard->UseVisualStyleBackColor = false;
+            this->btnNavDashboard->Click += gcnew System::EventHandler(this, &MainForm::OnNavButtonClick);
+            // 
+            // panelBrandLogo
+            // 
+            this->panelBrandLogo->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->panelBrandLogo->Controls->Add(this->lblNavHeader);
+            this->panelBrandLogo->Dock = System::Windows::Forms::DockStyle::Top;
+            this->panelBrandLogo->Location = System::Drawing::Point(0, 0);
+            this->panelBrandLogo->Name = L"panelBrandLogo";
+            this->panelBrandLogo->Padding = System::Windows::Forms::Padding(14, 10, 14, 10);
+            this->panelBrandLogo->Size = System::Drawing::Size(245, 42);
+            this->panelBrandLogo->TabIndex = 10;
+            // 
+            // lblNavHeader
+            // 
+            this->lblNavHeader->AutoSize = true;
+            this->lblNavHeader->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.25F, System::Drawing::FontStyle::Bold));
+            this->lblNavHeader->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(148)), static_cast<System::Int32>(static_cast<System::Byte>(163)),
+                static_cast<System::Int32>(static_cast<System::Byte>(184)));
+            this->lblNavHeader->Location = System::Drawing::Point(14, 14);
+            this->lblNavHeader->Name = L"lblNavHeader";
+            this->lblNavHeader->Size = System::Drawing::Size(229, 19);
+            this->lblNavHeader->TabIndex = 0;
+            this->lblNavHeader->Text = L"SYSTEM MODULES & WORKFLOWS";
+            // 
+            // panelMainContent
+            // 
             this->panelMainContent->Controls->Add(this->tabModules);
-
             this->panelMainContent->Dock = System::Windows::Forms::DockStyle::Fill;
-
             this->panelMainContent->Location = System::Drawing::Point(245, 68);
-
             this->panelMainContent->Name = L"panelMainContent";
-
             this->panelMainContent->Size = System::Drawing::Size(1035, 732);
-
             this->panelMainContent->TabIndex = 2;
-
-
-
+            // 
+            // tabModules
+            // 
             this->tabModules->Appearance = System::Windows::Forms::TabAppearance::FlatButtons;
-
             this->tabModules->Controls->Add(this->tabDashboard);
-
             this->tabModules->Controls->Add(this->tabAlerts);
-
             this->tabModules->Controls->Add(this->tabSemestersCourses);
-
             this->tabModules->Controls->Add(this->tabStaff);
-
             this->tabModules->Controls->Add(this->tabOfferings);
-
             this->tabModules->Controls->Add(this->tabScripts);
-
             this->tabModules->Controls->Add(this->tabMilestones);
-
             this->tabModules->Controls->Add(this->tabEvaluation);
-
             this->tabModules->Controls->Add(this->tabAudit);
-
             this->tabModules->Controls->Add(this->tabDatabase);
-
             this->tabModules->Dock = System::Windows::Forms::DockStyle::Fill;
-
             this->tabModules->ItemSize = System::Drawing::Size(0, 1);
-
             this->tabModules->Location = System::Drawing::Point(0, 0);
-
+            this->tabModules->Name = L"tabModules";
+            this->tabModules->SelectedIndex = 0;
+            this->tabModules->Size = System::Drawing::Size(1035, 732);
             this->tabModules->SizeMode = System::Windows::Forms::TabSizeMode::Fixed;
-
             this->tabModules->TabIndex = 0;
-
-
-
-            // Configure tabDashboard and its controls directly for Visual Studio Designer
-            this->tabDashboard->BackColor = System::Drawing::Color::FromArgb(248, 250, 252);
-            this->tabDashboard->Padding = System::Windows::Forms::Padding(20);
-            this->tabDashboard->Text = L"Executive Dashboard";
-
-            this->tlpStats = (gcnew System::Windows::Forms::TableLayoutPanel());
-            this->tlpStats->Dock = System::Windows::Forms::DockStyle::Top;
-            this->tlpStats->Height = 100;
-            this->tlpStats->ColumnCount = 6;
-            this->tlpStats->RowCount = 1;
-            this->tlpStats->Location = System::Drawing::Point(20, 20);
-            this->tlpStats->Name = L"tlpStats";
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-            this->tlpStats->ColumnStyles->Add(gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F));
-
-            // Stat Card 1
-            this->pnlStat1 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat1->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat1->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat1->BackColor = System::Drawing::Color::White;
-            this->pnlStat1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat1 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat1->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat1->Height = 4;
-            this->stripStat1->BackColor = System::Drawing::Color::FromArgb(37, 99, 235);
-            this->pnlStat1->Controls->Add(this->stripStat1);
-            this->lblStatTitle1 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle1->Text = L"Total Course Offerings";
-            this->lblStatTitle1->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle1->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle1->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle1->Size = System::Drawing::Size(140, 32);
-            this->pnlStat1->Controls->Add(this->lblStatTitle1);
-            this->lblStatVal1 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal1->Text = L"14";
-            this->lblStatVal1->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal1->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal1->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal1->Size = System::Drawing::Size(140, 38);
-            this->pnlStat1->Controls->Add(this->lblStatVal1);
-            this->tlpStats->Controls->Add(this->pnlStat1, 0, 0);
-
-            // Stat Card 2
-            this->pnlStat2 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat2->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat2->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat2->BackColor = System::Drawing::Color::White;
-            this->pnlStat2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat2 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat2->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat2->Height = 4;
-            this->stripStat2->BackColor = System::Drawing::Color::FromArgb(22, 163, 74);
-            this->pnlStat2->Controls->Add(this->stripStat2);
-            this->lblStatTitle2 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle2->Text = L"Senate Cleared (Approved)";
-            this->lblStatTitle2->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle2->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle2->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle2->Size = System::Drawing::Size(140, 32);
-            this->pnlStat2->Controls->Add(this->lblStatTitle2);
-            this->lblStatVal2 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal2->Text = L"8";
-            this->lblStatVal2->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal2->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal2->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal2->Size = System::Drawing::Size(140, 38);
-            this->pnlStat2->Controls->Add(this->lblStatVal2);
-            this->tlpStats->Controls->Add(this->pnlStat2, 1, 0);
-
-            // Stat Card 3
-            this->pnlStat3 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat3->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat3->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat3->BackColor = System::Drawing::Color::White;
-            this->pnlStat3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat3 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat3->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat3->Height = 4;
-            this->stripStat3->BackColor = System::Drawing::Color::FromArgb(202, 138, 4);
-            this->pnlStat3->Controls->Add(this->stripStat3);
-            this->lblStatTitle3 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle3->Text = L"First Marking in Progress";
-            this->lblStatTitle3->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle3->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle3->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle3->Size = System::Drawing::Size(140, 32);
-            this->pnlStat3->Controls->Add(this->lblStatTitle3);
-            this->lblStatVal3 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal3->Text = L"3";
-            this->lblStatVal3->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal3->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal3->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal3->Size = System::Drawing::Size(140, 38);
-            this->pnlStat3->Controls->Add(this->lblStatVal3);
-            this->tlpStats->Controls->Add(this->pnlStat3, 2, 0);
-
-            // Stat Card 4
-            this->pnlStat4 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat4->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat4->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat4->BackColor = System::Drawing::Color::White;
-            this->pnlStat4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat4 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat4->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat4->Height = 4;
-            this->stripStat4->BackColor = System::Drawing::Color::FromArgb(147, 51, 234);
-            this->pnlStat4->Controls->Add(this->stripStat4);
-            this->lblStatTitle4 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle4->Text = L"Under Moderation (2nd)";
-            this->lblStatTitle4->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle4->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle4->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle4->Size = System::Drawing::Size(140, 32);
-            this->pnlStat4->Controls->Add(this->lblStatTitle4);
-            this->lblStatVal4 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal4->Text = L"2";
-            this->lblStatVal4->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal4->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal4->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal4->Size = System::Drawing::Size(140, 38);
-            this->pnlStat4->Controls->Add(this->lblStatVal4);
-            this->tlpStats->Controls->Add(this->pnlStat4, 3, 0);
-
-            // Stat Card 5
-            this->pnlStat5 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat5->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat5->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat5->BackColor = System::Drawing::Color::White;
-            this->pnlStat5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat5 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat5->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat5->Height = 4;
-            this->stripStat5->BackColor = System::Drawing::Color::FromArgb(13, 148, 136);
-            this->pnlStat5->Controls->Add(this->stripStat5);
-            this->lblStatTitle5 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle5->Text = L"Results Authorized (HOD)";
-            this->lblStatTitle5->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle5->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle5->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle5->Size = System::Drawing::Size(140, 32);
-            this->pnlStat5->Controls->Add(this->lblStatTitle5);
-            this->lblStatVal5 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal5->Text = L"6";
-            this->lblStatVal5->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal5->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal5->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal5->Size = System::Drawing::Size(140, 38);
-            this->pnlStat5->Controls->Add(this->lblStatVal5);
-            this->tlpStats->Controls->Add(this->pnlStat5, 4, 0);
-
-            // Stat Card 6
-            this->pnlStat6 = (gcnew System::Windows::Forms::Panel());
-            this->pnlStat6->Dock = System::Windows::Forms::DockStyle::Fill;
-            this->pnlStat6->Margin = System::Windows::Forms::Padding(4);
-            this->pnlStat6->BackColor = System::Drawing::Color::White;
-            this->pnlStat6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->stripStat6 = (gcnew System::Windows::Forms::Panel());
-            this->stripStat6->Dock = System::Windows::Forms::DockStyle::Top;
-            this->stripStat6->Height = 4;
-            this->stripStat6->BackColor = System::Drawing::Color::FromArgb(220, 38, 38);
-            this->pnlStat6->Controls->Add(this->stripStat6);
-            this->lblStatTitle6 = (gcnew System::Windows::Forms::Label());
-            this->lblStatTitle6->Text = L"Overdue Milestones Flagged";
-            this->lblStatTitle6->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 8.0F);
-            this->lblStatTitle6->ForeColor = System::Drawing::Color::FromArgb(100, 116, 139);
-            this->lblStatTitle6->Location = System::Drawing::Point(10, 10);
-            this->lblStatTitle6->Size = System::Drawing::Size(140, 32);
-            this->pnlStat6->Controls->Add(this->lblStatTitle6);
-            this->lblStatVal6 = (gcnew System::Windows::Forms::Label());
-            this->lblStatVal6->Text = L"0";
-            this->lblStatVal6->Font = gcnew System::Drawing::Font(L"Segoe UI Bold", 17.0F, System::Drawing::FontStyle::Bold);
-            this->lblStatVal6->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblStatVal6->Location = System::Drawing::Point(8, 44);
-            this->lblStatVal6->Size = System::Drawing::Size(140, 38);
-            this->pnlStat6->Controls->Add(this->lblStatVal6);
-            this->tlpStats->Controls->Add(this->pnlStat6, 5, 0);
-
-            // Section Header
-            this->lblDashboardTableTitle = (gcnew System::Windows::Forms::Label());
-            this->lblDashboardTableTitle->AutoSize = true;
-            this->lblDashboardTableTitle->Text = L"Real-Time Milestone Tracking & Turnaround Status";
-            this->lblDashboardTableTitle->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 12.0F, System::Drawing::FontStyle::Bold);
-            this->lblDashboardTableTitle->ForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->lblDashboardTableTitle->Location = System::Drawing::Point(20, 130);
-            this->lblDashboardTableTitle->Size = System::Drawing::Size(410, 21);
-            this->lblDashboardTableTitle->Name = L"lblDashboardTableTitle";
-
-            // Overview DataGridView
-            this->dgvDashboardOverview = (gcnew System::Windows::Forms::DataGridView());
-            this->dgvDashboardOverview->EnableHeadersVisualStyles = false;
-            this->dgvDashboardOverview->BackgroundColor = System::Drawing::Color::White;
-            this->dgvDashboardOverview->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-            this->dgvDashboardOverview->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
-            this->dgvDashboardOverview->GridColor = System::Drawing::Color::FromArgb(226, 232, 240);
-            this->dgvDashboardOverview->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
-            this->dgvDashboardOverview->ColumnHeadersDefaultCellStyle->BackColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->dgvDashboardOverview->ColumnHeadersDefaultCellStyle->ForeColor = System::Drawing::Color::White;
-            this->dgvDashboardOverview->ColumnHeadersDefaultCellStyle->Font = gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold);
-            this->dgvDashboardOverview->ColumnHeadersHeight = 36;
-            this->dgvDashboardOverview->RowTemplate->Height = 32;
-            this->dgvDashboardOverview->DefaultCellStyle->SelectionBackColor = System::Drawing::Color::FromArgb(224, 242, 254);
-            this->dgvDashboardOverview->DefaultCellStyle->SelectionForeColor = System::Drawing::Color::FromArgb(15, 23, 42);
-            this->dgvDashboardOverview->DefaultCellStyle->Font = gcnew System::Drawing::Font(L"Segoe UI", 9.0F);
-            this->dgvDashboardOverview->AlternatingRowsDefaultCellStyle->BackColor = System::Drawing::Color::FromArgb(248, 250, 252);
-            this->dgvDashboardOverview->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-            this->dgvDashboardOverview->MultiSelect = false;
-            this->dgvDashboardOverview->Location = System::Drawing::Point(20, 162);
-            this->dgvDashboardOverview->Size = System::Drawing::Size(995, 520);
-            this->dgvDashboardOverview->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Left | System::Windows::Forms::AnchorStyles::Right));
-            this->dgvDashboardOverview->ReadOnly = true;
-            this->dgvDashboardOverview->AllowUserToAddRows = false;
-            this->dgvDashboardOverview->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-            this->dgvDashboardOverview->Name = L"dgvDashboardOverview";
-            this->dgvDashboardOverview->CellFormatting += gcnew System::Windows::Forms::DataGridViewCellFormattingEventHandler(this, &MainForm::dgvDashboardOverview_CellFormatting);
-
+            // 
+            // tabDashboard
+            // 
+            this->tabDashboard->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)), static_cast<System::Int32>(static_cast<System::Byte>(250)),
+                static_cast<System::Int32>(static_cast<System::Byte>(252)));
             this->tabDashboard->Controls->Add(this->tlpStats);
             this->tabDashboard->Controls->Add(this->lblDashboardTableTitle);
             this->tabDashboard->Controls->Add(this->dgvDashboardOverview);
-
-            SetupDashboardTab();
-
-            SetupAlertsTab();
-
-            SetupSemestersTab();
-
-            SetupStaffTab();
-
-            SetupOfferingsTab();
-
-            SetupScriptsTab();
-
-            SetupMilestonesTab();
-
-            SetupEvaluationTab();
-
-            SetupAuditTab();
-
-            SetupDatabaseTab();
-
-
-
-            this->AutoScaleDimensions = System::Drawing::SizeF(7, 15);
-
+            this->tabDashboard->Location = System::Drawing::Point(4, 5);
+            this->tabDashboard->Name = L"tabDashboard";
+            this->tabDashboard->Padding = System::Windows::Forms::Padding(20);
+            this->tabDashboard->Size = System::Drawing::Size(1027, 723);
+            this->tabDashboard->TabIndex = 0;
+            this->tabDashboard->Text = L"Executive Dashboard";
+            // 
+            // tlpStats
+            // 
+            this->tlpStats->ColumnCount = 6;
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->ColumnStyles->Add((gcnew System::Windows::Forms::ColumnStyle(System::Windows::Forms::SizeType::Percent, 16.66F)));
+            this->tlpStats->Controls->Add(this->pnlStat1, 0, 0);
+            this->tlpStats->Controls->Add(this->pnlStat2, 1, 0);
+            this->tlpStats->Controls->Add(this->pnlStat3, 2, 0);
+            this->tlpStats->Controls->Add(this->pnlStat4, 3, 0);
+            this->tlpStats->Controls->Add(this->pnlStat5, 4, 0);
+            this->tlpStats->Controls->Add(this->pnlStat6, 5, 0);
+            this->tlpStats->Dock = System::Windows::Forms::DockStyle::Top;
+            this->tlpStats->Location = System::Drawing::Point(20, 20);
+            this->tlpStats->Name = L"tlpStats";
+            this->tlpStats->RowCount = 1;
+            this->tlpStats->RowStyles->Add((gcnew System::Windows::Forms::RowStyle(System::Windows::Forms::SizeType::Absolute, 20)));
+            this->tlpStats->Size = System::Drawing::Size(987, 100);
+            this->tlpStats->TabIndex = 0;
+            // 
+            // pnlStat1
+            // 
+            this->pnlStat1->BackColor = System::Drawing::Color::White;
+            this->pnlStat1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat1->Controls->Add(this->stripStat1);
+            this->pnlStat1->Controls->Add(this->lblStatTitle1);
+            this->pnlStat1->Controls->Add(this->lblStatVal1);
+            this->pnlStat1->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat1->Location = System::Drawing::Point(4, 4);
+            this->pnlStat1->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat1->Name = L"pnlStat1";
+            this->pnlStat1->Size = System::Drawing::Size(156, 92);
+            this->pnlStat1->TabIndex = 0;
+            // 
+            // stripStat1
+            // 
+            this->stripStat1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(37)), static_cast<System::Int32>(static_cast<System::Byte>(99)),
+                static_cast<System::Int32>(static_cast<System::Byte>(235)));
+            this->stripStat1->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat1->Location = System::Drawing::Point(0, 0);
+            this->stripStat1->Name = L"stripStat1";
+            this->stripStat1->Size = System::Drawing::Size(154, 4);
+            this->stripStat1->TabIndex = 0;
+            // 
+            // lblStatTitle1
+            // 
+            this->lblStatTitle1->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle1->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle1->Name = L"lblStatTitle1";
+            this->lblStatTitle1->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle1->TabIndex = 1;
+            this->lblStatTitle1->Text = L"Total Course Offerings";
+            // 
+            // lblStatVal1
+            // 
+            this->lblStatVal1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal1->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal1->Name = L"lblStatVal1";
+            this->lblStatVal1->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal1->TabIndex = 2;
+            this->lblStatVal1->Text = L"14";
+            // 
+            // pnlStat2
+            // 
+            this->pnlStat2->BackColor = System::Drawing::Color::White;
+            this->pnlStat2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat2->Controls->Add(this->stripStat2);
+            this->pnlStat2->Controls->Add(this->lblStatTitle2);
+            this->pnlStat2->Controls->Add(this->lblStatVal2);
+            this->pnlStat2->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat2->Location = System::Drawing::Point(168, 4);
+            this->pnlStat2->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat2->Name = L"pnlStat2";
+            this->pnlStat2->Size = System::Drawing::Size(156, 92);
+            this->pnlStat2->TabIndex = 1;
+            // 
+            // stripStat2
+            // 
+            this->stripStat2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(22)), static_cast<System::Int32>(static_cast<System::Byte>(163)),
+                static_cast<System::Int32>(static_cast<System::Byte>(74)));
+            this->stripStat2->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat2->Location = System::Drawing::Point(0, 0);
+            this->stripStat2->Name = L"stripStat2";
+            this->stripStat2->Size = System::Drawing::Size(154, 4);
+            this->stripStat2->TabIndex = 0;
+            // 
+            // lblStatTitle2
+            // 
+            this->lblStatTitle2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle2->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle2->Name = L"lblStatTitle2";
+            this->lblStatTitle2->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle2->TabIndex = 1;
+            this->lblStatTitle2->Text = L"Senate Cleared (Approved)";
+            // 
+            // lblStatVal2
+            // 
+            this->lblStatVal2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal2->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal2->Name = L"lblStatVal2";
+            this->lblStatVal2->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal2->TabIndex = 2;
+            this->lblStatVal2->Text = L"8";
+            // 
+            // pnlStat3
+            // 
+            this->pnlStat3->BackColor = System::Drawing::Color::White;
+            this->pnlStat3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat3->Controls->Add(this->stripStat3);
+            this->pnlStat3->Controls->Add(this->lblStatTitle3);
+            this->pnlStat3->Controls->Add(this->lblStatVal3);
+            this->pnlStat3->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat3->Location = System::Drawing::Point(332, 4);
+            this->pnlStat3->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat3->Name = L"pnlStat3";
+            this->pnlStat3->Size = System::Drawing::Size(156, 92);
+            this->pnlStat3->TabIndex = 2;
+            // 
+            // stripStat3
+            // 
+            this->stripStat3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(202)), static_cast<System::Int32>(static_cast<System::Byte>(138)),
+                static_cast<System::Int32>(static_cast<System::Byte>(4)));
+            this->stripStat3->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat3->Location = System::Drawing::Point(0, 0);
+            this->stripStat3->Name = L"stripStat3";
+            this->stripStat3->Size = System::Drawing::Size(154, 4);
+            this->stripStat3->TabIndex = 0;
+            // 
+            // lblStatTitle3
+            // 
+            this->lblStatTitle3->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle3->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle3->Name = L"lblStatTitle3";
+            this->lblStatTitle3->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle3->TabIndex = 1;
+            this->lblStatTitle3->Text = L"First Marking in Progress";
+            // 
+            // lblStatVal3
+            // 
+            this->lblStatVal3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal3->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal3->Name = L"lblStatVal3";
+            this->lblStatVal3->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal3->TabIndex = 2;
+            this->lblStatVal3->Text = L"3";
+            // 
+            // pnlStat4
+            // 
+            this->pnlStat4->BackColor = System::Drawing::Color::White;
+            this->pnlStat4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat4->Controls->Add(this->stripStat4);
+            this->pnlStat4->Controls->Add(this->lblStatTitle4);
+            this->pnlStat4->Controls->Add(this->lblStatVal4);
+            this->pnlStat4->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat4->Location = System::Drawing::Point(496, 4);
+            this->pnlStat4->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat4->Name = L"pnlStat4";
+            this->pnlStat4->Size = System::Drawing::Size(156, 92);
+            this->pnlStat4->TabIndex = 3;
+            // 
+            // stripStat4
+            // 
+            this->stripStat4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(147)), static_cast<System::Int32>(static_cast<System::Byte>(51)),
+                static_cast<System::Int32>(static_cast<System::Byte>(234)));
+            this->stripStat4->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat4->Location = System::Drawing::Point(0, 0);
+            this->stripStat4->Name = L"stripStat4";
+            this->stripStat4->Size = System::Drawing::Size(154, 4);
+            this->stripStat4->TabIndex = 0;
+            // 
+            // lblStatTitle4
+            // 
+            this->lblStatTitle4->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle4->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle4->Name = L"lblStatTitle4";
+            this->lblStatTitle4->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle4->TabIndex = 1;
+            this->lblStatTitle4->Text = L"Under Moderation (2nd)";
+            // 
+            // lblStatVal4
+            // 
+            this->lblStatVal4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal4->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal4->Name = L"lblStatVal4";
+            this->lblStatVal4->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal4->TabIndex = 2;
+            this->lblStatVal4->Text = L"2";
+            // 
+            // pnlStat5
+            // 
+            this->pnlStat5->BackColor = System::Drawing::Color::White;
+            this->pnlStat5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat5->Controls->Add(this->stripStat5);
+            this->pnlStat5->Controls->Add(this->lblStatTitle5);
+            this->pnlStat5->Controls->Add(this->lblStatVal5);
+            this->pnlStat5->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat5->Location = System::Drawing::Point(660, 4);
+            this->pnlStat5->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat5->Name = L"pnlStat5";
+            this->pnlStat5->Size = System::Drawing::Size(156, 92);
+            this->pnlStat5->TabIndex = 4;
+            // 
+            // stripStat5
+            // 
+            this->stripStat5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(13)), static_cast<System::Int32>(static_cast<System::Byte>(148)),
+                static_cast<System::Int32>(static_cast<System::Byte>(136)));
+            this->stripStat5->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat5->Location = System::Drawing::Point(0, 0);
+            this->stripStat5->Name = L"stripStat5";
+            this->stripStat5->Size = System::Drawing::Size(154, 4);
+            this->stripStat5->TabIndex = 0;
+            // 
+            // lblStatTitle5
+            // 
+            this->lblStatTitle5->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle5->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle5->Name = L"lblStatTitle5";
+            this->lblStatTitle5->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle5->TabIndex = 1;
+            this->lblStatTitle5->Text = L"Results Authorized (HOD)";
+            // 
+            // lblStatVal5
+            // 
+            this->lblStatVal5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal5->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal5->Name = L"lblStatVal5";
+            this->lblStatVal5->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal5->TabIndex = 2;
+            this->lblStatVal5->Text = L"6";
+            // 
+            // pnlStat6
+            // 
+            this->pnlStat6->BackColor = System::Drawing::Color::White;
+            this->pnlStat6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+            this->pnlStat6->Controls->Add(this->stripStat6);
+            this->pnlStat6->Controls->Add(this->lblStatTitle6);
+            this->pnlStat6->Controls->Add(this->lblStatVal6);
+            this->pnlStat6->Dock = System::Windows::Forms::DockStyle::Fill;
+            this->pnlStat6->Location = System::Drawing::Point(824, 4);
+            this->pnlStat6->Margin = System::Windows::Forms::Padding(4);
+            this->pnlStat6->Name = L"pnlStat6";
+            this->pnlStat6->Size = System::Drawing::Size(159, 92);
+            this->pnlStat6->TabIndex = 5;
+            // 
+            // stripStat6
+            // 
+            this->stripStat6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(220)), static_cast<System::Int32>(static_cast<System::Byte>(38)),
+                static_cast<System::Int32>(static_cast<System::Byte>(38)));
+            this->stripStat6->Dock = System::Windows::Forms::DockStyle::Top;
+            this->stripStat6->Location = System::Drawing::Point(0, 0);
+            this->stripStat6->Name = L"stripStat6";
+            this->stripStat6->Size = System::Drawing::Size(157, 4);
+            this->stripStat6->TabIndex = 0;
+            // 
+            // lblStatTitle6
+            // 
+            this->lblStatTitle6->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 8));
+            this->lblStatTitle6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(100)), static_cast<System::Int32>(static_cast<System::Byte>(116)),
+                static_cast<System::Int32>(static_cast<System::Byte>(139)));
+            this->lblStatTitle6->Location = System::Drawing::Point(10, 10);
+            this->lblStatTitle6->Name = L"lblStatTitle6";
+            this->lblStatTitle6->Size = System::Drawing::Size(140, 32);
+            this->lblStatTitle6->TabIndex = 1;
+            this->lblStatTitle6->Text = L"Overdue Milestones Flagged";
+            // 
+            // lblStatVal6
+            // 
+            this->lblStatVal6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 17, System::Drawing::FontStyle::Bold));
+            this->lblStatVal6->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblStatVal6->Location = System::Drawing::Point(8, 44);
+            this->lblStatVal6->Name = L"lblStatVal6";
+            this->lblStatVal6->Size = System::Drawing::Size(140, 38);
+            this->lblStatVal6->TabIndex = 2;
+            this->lblStatVal6->Text = L"0";
+            // 
+            // lblDashboardTableTitle
+            // 
+            this->lblDashboardTableTitle->AutoSize = true;
+            this->lblDashboardTableTitle->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 12, System::Drawing::FontStyle::Bold));
+            this->lblDashboardTableTitle->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            this->lblDashboardTableTitle->Location = System::Drawing::Point(20, 130);
+            this->lblDashboardTableTitle->Name = L"lblDashboardTableTitle";
+            this->lblDashboardTableTitle->Size = System::Drawing::Size(457, 28);
+            this->lblDashboardTableTitle->TabIndex = 1;
+            this->lblDashboardTableTitle->Text = L"Real-Time Milestone Tracking & Turnaround Status";
+            // 
+            // dgvDashboardOverview
+            // 
+            this->dgvDashboardOverview->AllowUserToAddRows = false;
+            dataGridViewCellStyle1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(248)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)), static_cast<System::Int32>(static_cast<System::Byte>(252)));
+            this->dgvDashboardOverview->AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this->dgvDashboardOverview->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->dgvDashboardOverview->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+            this->dgvDashboardOverview->BackgroundColor = System::Drawing::Color::White;
+            this->dgvDashboardOverview->CellBorderStyle = System::Windows::Forms::DataGridViewCellBorderStyle::SingleHorizontal;
+            this->dgvDashboardOverview->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::None;
+            dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)), static_cast<System::Int32>(static_cast<System::Byte>(23)),
+                static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Segoe UI Semibold", 9.25F, System::Drawing::FontStyle::Bold));
+            dataGridViewCellStyle2->ForeColor = System::Drawing::Color::White;
+            dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+            dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+            dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+            this->dgvDashboardOverview->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this->dgvDashboardOverview->ColumnHeadersHeight = 36;
+            dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+            dataGridViewCellStyle3->BackColor = System::Drawing::SystemColors::Window;
+            dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
+            dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::ControlText;
+            dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(224)),
+                static_cast<System::Int32>(static_cast<System::Byte>(242)), static_cast<System::Int32>(static_cast<System::Byte>(254)));
+            dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(15)),
+                static_cast<System::Int32>(static_cast<System::Byte>(23)), static_cast<System::Int32>(static_cast<System::Byte>(42)));
+            dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+            this->dgvDashboardOverview->DefaultCellStyle = dataGridViewCellStyle3;
+            this->dgvDashboardOverview->EnableHeadersVisualStyles = false;
+            this->dgvDashboardOverview->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(226)),
+                static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)));
+            this->dgvDashboardOverview->Location = System::Drawing::Point(20, 162);
+            this->dgvDashboardOverview->MultiSelect = false;
+            this->dgvDashboardOverview->Name = L"dgvDashboardOverview";
+            this->dgvDashboardOverview->ReadOnly = true;
+            this->dgvDashboardOverview->RowHeadersWidth = 51;
+            this->dgvDashboardOverview->RowTemplate->Height = 32;
+            this->dgvDashboardOverview->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+            this->dgvDashboardOverview->Size = System::Drawing::Size(1830, 1152);
+            this->dgvDashboardOverview->TabIndex = 2;
+            this->dgvDashboardOverview->CellFormatting += gcnew System::Windows::Forms::DataGridViewCellFormattingEventHandler(this, &MainForm::dgvDashboardOverview_CellFormatting);
+            // 
+            // tabAlerts
+            // 
+            this->tabAlerts->Location = System::Drawing::Point(4, 5);
+            this->tabAlerts->Name = L"tabAlerts";
+            this->tabAlerts->Size = System::Drawing::Size(192, 91);
+            this->tabAlerts->TabIndex = 1;
+            // 
+            // tabSemestersCourses
+            // 
+            this->tabSemestersCourses->Location = System::Drawing::Point(4, 5);
+            this->tabSemestersCourses->Name = L"tabSemestersCourses";
+            this->tabSemestersCourses->Size = System::Drawing::Size(192, 91);
+            this->tabSemestersCourses->TabIndex = 2;
+            // 
+            // tabStaff
+            // 
+            this->tabStaff->Location = System::Drawing::Point(4, 5);
+            this->tabStaff->Name = L"tabStaff";
+            this->tabStaff->Size = System::Drawing::Size(192, 91);
+            this->tabStaff->TabIndex = 3;
+            // 
+            // tabOfferings
+            // 
+            this->tabOfferings->Location = System::Drawing::Point(4, 5);
+            this->tabOfferings->Name = L"tabOfferings";
+            this->tabOfferings->Size = System::Drawing::Size(192, 91);
+            this->tabOfferings->TabIndex = 4;
+            // 
+            // tabScripts
+            // 
+            this->tabScripts->Location = System::Drawing::Point(4, 5);
+            this->tabScripts->Name = L"tabScripts";
+            this->tabScripts->Size = System::Drawing::Size(192, 91);
+            this->tabScripts->TabIndex = 5;
+            // 
+            // tabMilestones
+            // 
+            this->tabMilestones->Location = System::Drawing::Point(4, 5);
+            this->tabMilestones->Name = L"tabMilestones";
+            this->tabMilestones->Size = System::Drawing::Size(192, 91);
+            this->tabMilestones->TabIndex = 6;
+            // 
+            // tabEvaluation
+            // 
+            this->tabEvaluation->Location = System::Drawing::Point(4, 5);
+            this->tabEvaluation->Name = L"tabEvaluation";
+            this->tabEvaluation->Size = System::Drawing::Size(192, 91);
+            this->tabEvaluation->TabIndex = 7;
+            // 
+            // tabAudit
+            // 
+            this->tabAudit->Location = System::Drawing::Point(4, 5);
+            this->tabAudit->Name = L"tabAudit";
+            this->tabAudit->Size = System::Drawing::Size(192, 91);
+            this->tabAudit->TabIndex = 8;
+            // 
+            // tabDatabase
+            // 
+            this->tabDatabase->Location = System::Drawing::Point(4, 5);
+            this->tabDatabase->Name = L"tabDatabase";
+            this->tabDatabase->Size = System::Drawing::Size(192, 91);
+            this->tabDatabase->TabIndex = 9;
+            // 
+            // MainForm
+            // 
+            this->AutoScaleDimensions = System::Drawing::SizeF(8, 20);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-
-            this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)),
-
-                static_cast<System::Int32>(static_cast<System::Byte>(245)), static_cast<System::Int32>(static_cast<System::Byte>(249)));
-
+            this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(241)), static_cast<System::Int32>(static_cast<System::Byte>(245)),
+                static_cast<System::Int32>(static_cast<System::Byte>(249)));
             this->ClientSize = System::Drawing::Size(1280, 800);
-
             this->Controls->Add(this->panelMainContent);
-
             this->Controls->Add(this->panelSidebar);
-
             this->Controls->Add(this->panelTop);
-
-            this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9.0F));
-
+            this->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9));
             this->MinimumSize = System::Drawing::Size(1150, 720);
-
             this->Name = L"MainForm";
-
             this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-
             this->Text = L"Examination Results Monitoring System - University Academic Governance Suite";
-
             this->panelTop->ResumeLayout(false);
-
             this->panelTop->PerformLayout();
-
             this->panelTopRight->ResumeLayout(false);
-
             this->panelTopRight->PerformLayout();
-
             this->panelSidebar->ResumeLayout(false);
-
             this->panelBrandLogo->ResumeLayout(false);
-
             this->panelBrandLogo->PerformLayout();
-
             this->panelMainContent->ResumeLayout(false);
-
             this->tabModules->ResumeLayout(false);
-
+            this->tabDashboard->ResumeLayout(false);
+            this->tabDashboard->PerformLayout();
+            this->tlpStats->ResumeLayout(false);
+            this->pnlStat1->ResumeLayout(false);
+            this->pnlStat2->ResumeLayout(false);
+            this->pnlStat3->ResumeLayout(false);
+            this->pnlStat4->ResumeLayout(false);
+            this->pnlStat5->ResumeLayout(false);
+            this->pnlStat6->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dgvDashboardOverview))->EndInit();
             this->ResumeLayout(false);
 
         }
