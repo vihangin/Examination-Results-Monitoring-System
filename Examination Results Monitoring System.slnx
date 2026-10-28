@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Examination Results Monitoring System/Examination Results Monitoring System.vcxproj" />
+</Solution>
