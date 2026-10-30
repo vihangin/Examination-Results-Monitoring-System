@@ -47,24 +47,27 @@ namespace Forms {
             _session = gcnew UserSession(L"USR-ADMIN", L"Administrator", L"admin@university.edu", L"SYSTEM_ADMIN", L"ADMIN");
             _db = DatabaseManager::GetInstance();
             InitializeComponent();
+            InitializeCustomTabs();
+            if (LicenseManager::UsageMode != LicenseUsageMode::Designtime) {
+                ApplyRolePermissions();
+                PopulateSemesterFilter();
+                RefreshAllViews();
+            }
         }
 
         MainForm(UserSession^ session)
-
         {
-
-            _session = session;
-
+            if (session != nullptr) {
+                _session = session;
+            } else {
+                _session = gcnew UserSession(L"USR-ADMIN", L"Administrator", L"admin@university.edu", L"SYSTEM_ADMIN", L"ADMIN");
+            }
             _db = DatabaseManager::GetInstance();
-
             InitializeComponent();
-
+            InitializeCustomTabs();
             ApplyRolePermissions();
-
             PopulateSemesterFilter();
-
             RefreshAllViews();
-
         }
 
 
@@ -92,6 +95,7 @@ namespace Forms {
         UserSession^ _session;
 
         DatabaseManager^ _db;
+        bool _customTabsInitialized;
 
 
 
@@ -1047,7 +1051,7 @@ namespace Forms {
             this->btnNavDashboard->Padding = System::Windows::Forms::Padding(12, 0, 8, 0);
             this->btnNavDashboard->Size = System::Drawing::Size(245, 42);
             this->btnNavDashboard->TabIndex = 0;
-            this->btnNavDashboard->Tag = 0;
+            this->btnNavDashboard->Tag = safe_cast<System::Object^>(0);
             this->btnNavDashboard->Text = L"  1. Executive Dashboard";
             this->btnNavDashboard->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
             this->btnNavDashboard->UseVisualStyleBackColor = false;
@@ -3037,6 +3041,27 @@ namespace Forms {
 
         }
 
+        void InitializeCustomTabs() {
+            if (_customTabsInitialized) return;
+            _customTabsInitialized = true;
+
+            SetupAlertsTab();
+            SetupSemestersTab();
+            SetupStaffTab();
+            SetupOfferingsTab();
+            SetupScriptsTab();
+            SetupMilestonesTab();
+            SetupEvaluationTab();
+            SetupAuditTab();
+            SetupDatabaseTab();
+        }
+
+        void SafeSetEnabled(System::Windows::Forms::Button^ btn, bool enabled) {
+            if (btn != nullptr) {
+                btn->Enabled = enabled;
+            }
+        }
+
 
 
         void AddFormField(Panel^ parent, String^ labelText, Control^ ctrl, int left, int top, int width) {
@@ -3068,201 +3093,101 @@ namespace Forms {
 
 
         void ApplyRolePermissions() {
-
-            lblUserBadge->Text = _session->Name + " | Role: " + Roles::GetDisplayName(_session->Role);
-
-
+            if (_session == nullptr) return;
+            if (lblUserBadge != nullptr) {
+                lblUserBadge->Text = _session->Name + " | Role: " + Roles::GetDisplayName(_session->Role);
+            }
 
             if (_session->IsDean()) {
-
-                btnSaveSemester->Enabled = false;
-
-                btnSaveCourse->Enabled = false;
-
-                btnSaveStaff->Enabled = false;
-
-                btnSaveOffering->Enabled = false;
-
-                btnToggleSenate->Enabled = false;
-
-                btnAddScriptBundle->Enabled = false;
-
-                btnMilestoneCollect->Enabled = false;
-
-                btnMilestoneMarkSheet->Enabled = false;
-
-                btnMilestoneDispatch->Enabled = false;
-
-                btnMilestoneReturn->Enabled = false;
-
-                btnMilestoneEIS->Enabled = false;
-
-                btnMilestoneHOD->Enabled = false;
-
-                btnSaveWeights->Enabled = false;
-
+                SafeSetEnabled(btnSaveSemester, false);
+                SafeSetEnabled(btnSaveCourse, false);
+                SafeSetEnabled(btnSaveStaff, false);
+                SafeSetEnabled(btnSaveOffering, false);
+                SafeSetEnabled(btnToggleSenate, false);
+                SafeSetEnabled(btnAddScriptBundle, false);
+                SafeSetEnabled(btnMilestoneCollect, false);
+                SafeSetEnabled(btnMilestoneMarkSheet, false);
+                SafeSetEnabled(btnMilestoneDispatch, false);
+                SafeSetEnabled(btnMilestoneReturn, false);
+                SafeSetEnabled(btnMilestoneEIS, false);
+                SafeSetEnabled(btnMilestoneHOD, false);
+                SafeSetEnabled(btnSaveWeights, false);
             }
-
-
-
             else if (_session->IsSupervisor()) {
-
-                btnSaveSemester->Enabled = false;
-
-                btnSaveCourse->Enabled = false;
-
-                btnSaveStaff->Enabled = false;
-
-                btnSaveOffering->Enabled = false;
-
-                btnToggleSenate->Enabled = false;
-
-                btnAddScriptBundle->Enabled = true;
-
-                btnMilestoneCollect->Enabled = false;
-
-                btnMilestoneMarkSheet->Enabled = false;
-
-                btnMilestoneDispatch->Enabled = false;
-
-                btnMilestoneReturn->Enabled = false;
-
-                btnMilestoneEIS->Enabled = false;
-
-                btnMilestoneHOD->Enabled = false;
-
-                btnSaveWeights->Enabled = false;
-
+                SafeSetEnabled(btnSaveSemester, false);
+                SafeSetEnabled(btnSaveCourse, false);
+                SafeSetEnabled(btnSaveStaff, false);
+                SafeSetEnabled(btnSaveOffering, false);
+                SafeSetEnabled(btnToggleSenate, false);
+                SafeSetEnabled(btnAddScriptBundle, true);
+                SafeSetEnabled(btnMilestoneCollect, false);
+                SafeSetEnabled(btnMilestoneMarkSheet, false);
+                SafeSetEnabled(btnMilestoneDispatch, false);
+                SafeSetEnabled(btnMilestoneReturn, false);
+                SafeSetEnabled(btnMilestoneEIS, false);
+                SafeSetEnabled(btnMilestoneHOD, false);
+                SafeSetEnabled(btnSaveWeights, false);
             }
-
-
-
             else if (_session->IsFirstExaminer()) {
-
-                btnSaveSemester->Enabled = false;
-
-                btnSaveCourse->Enabled = false;
-
-                btnSaveStaff->Enabled = false;
-
-                btnSaveOffering->Enabled = false;
-
-                btnToggleSenate->Enabled = false;
-
-                btnAddScriptBundle->Enabled = false;
-
-                btnMilestoneCollect->Enabled = true;
-
-                btnMilestoneMarkSheet->Enabled = true;
-
-                btnMilestoneDispatch->Enabled = false;
-
-                btnMilestoneReturn->Enabled = false;
-
-                btnMilestoneEIS->Enabled = true;
-
-                btnMilestoneHOD->Enabled = false;
-
-                btnSaveWeights->Enabled = true;
-
+                SafeSetEnabled(btnSaveSemester, false);
+                SafeSetEnabled(btnSaveCourse, false);
+                SafeSetEnabled(btnSaveStaff, false);
+                SafeSetEnabled(btnSaveOffering, false);
+                SafeSetEnabled(btnToggleSenate, false);
+                SafeSetEnabled(btnAddScriptBundle, false);
+                SafeSetEnabled(btnMilestoneCollect, true);
+                SafeSetEnabled(btnMilestoneMarkSheet, true);
+                SafeSetEnabled(btnMilestoneDispatch, false);
+                SafeSetEnabled(btnMilestoneReturn, false);
+                SafeSetEnabled(btnMilestoneEIS, true);
+                SafeSetEnabled(btnMilestoneHOD, false);
+                SafeSetEnabled(btnSaveWeights, true);
             }
-
-
-
             else if (_session->IsSecondExaminer()) {
-
-                btnSaveSemester->Enabled = false;
-
-                btnSaveCourse->Enabled = false;
-
-                btnSaveStaff->Enabled = false;
-
-                btnSaveOffering->Enabled = false;
-
-                btnToggleSenate->Enabled = false;
-
-                btnAddScriptBundle->Enabled = false;
-
-                btnMilestoneCollect->Enabled = false;
-
-                btnMilestoneMarkSheet->Enabled = false;
-
-                btnMilestoneDispatch->Enabled = false;
-
-                btnMilestoneReturn->Enabled = true;
-
-                btnMilestoneEIS->Enabled = false;
-
-                btnMilestoneHOD->Enabled = false;
-
-                btnSaveWeights->Enabled = false;
-
+                SafeSetEnabled(btnSaveSemester, false);
+                SafeSetEnabled(btnSaveCourse, false);
+                SafeSetEnabled(btnSaveStaff, false);
+                SafeSetEnabled(btnSaveOffering, false);
+                SafeSetEnabled(btnToggleSenate, false);
+                SafeSetEnabled(btnAddScriptBundle, false);
+                SafeSetEnabled(btnMilestoneCollect, false);
+                SafeSetEnabled(btnMilestoneMarkSheet, false);
+                SafeSetEnabled(btnMilestoneDispatch, false);
+                SafeSetEnabled(btnMilestoneReturn, true);
+                SafeSetEnabled(btnMilestoneEIS, false);
+                SafeSetEnabled(btnMilestoneHOD, false);
+                SafeSetEnabled(btnSaveWeights, false);
             }
-
-
-
             else if (_session->IsHOD()) {
-
-                btnSaveSemester->Enabled = false;
-
-                btnSaveCourse->Enabled = false;
-
-                btnSaveStaff->Enabled = false;
-
-                btnSaveOffering->Enabled = false;
-
-                btnToggleSenate->Enabled = false;
-
-                btnAddScriptBundle->Enabled = false;
-
-                btnMilestoneCollect->Enabled = false;
-
-                btnMilestoneMarkSheet->Enabled = false;
-
-                btnMilestoneDispatch->Enabled = false;
-
-                btnMilestoneReturn->Enabled = false;
-
-                btnMilestoneEIS->Enabled = false;
-
-                btnMilestoneHOD->Enabled = true;
-
-                btnSaveWeights->Enabled = false;
-
+                SafeSetEnabled(btnSaveSemester, false);
+                SafeSetEnabled(btnSaveCourse, false);
+                SafeSetEnabled(btnSaveStaff, false);
+                SafeSetEnabled(btnSaveOffering, false);
+                SafeSetEnabled(btnToggleSenate, false);
+                SafeSetEnabled(btnAddScriptBundle, false);
+                SafeSetEnabled(btnMilestoneCollect, false);
+                SafeSetEnabled(btnMilestoneMarkSheet, false);
+                SafeSetEnabled(btnMilestoneDispatch, false);
+                SafeSetEnabled(btnMilestoneReturn, false);
+                SafeSetEnabled(btnMilestoneEIS, false);
+                SafeSetEnabled(btnMilestoneHOD, true);
+                SafeSetEnabled(btnSaveWeights, false);
             }
-
-
-
             else if (_session->IsAROffice()) {
-
-                btnSaveSemester->Enabled = true;
-
-                btnSaveCourse->Enabled = true;
-
-                btnSaveStaff->Enabled = true;
-
-                btnSaveOffering->Enabled = true;
-
-                btnToggleSenate->Enabled = true;
-
-                btnAddScriptBundle->Enabled = true;
-
-                btnMilestoneCollect->Enabled = true;
-
-                btnMilestoneMarkSheet->Enabled = true;
-
-                btnMilestoneDispatch->Enabled = true;
-
-                btnMilestoneReturn->Enabled = true;
-
-                btnMilestoneEIS->Enabled = true;
-
-                btnMilestoneHOD->Enabled = true;
-
-                btnSaveWeights->Enabled = true;
-
+                SafeSetEnabled(btnSaveSemester, true);
+                SafeSetEnabled(btnSaveCourse, true);
+                SafeSetEnabled(btnSaveStaff, true);
+                SafeSetEnabled(btnSaveOffering, true);
+                SafeSetEnabled(btnToggleSenate, true);
+                SafeSetEnabled(btnAddScriptBundle, true);
+                SafeSetEnabled(btnMilestoneCollect, true);
+                SafeSetEnabled(btnMilestoneMarkSheet, true);
+                SafeSetEnabled(btnMilestoneDispatch, true);
+                SafeSetEnabled(btnMilestoneReturn, true);
+                SafeSetEnabled(btnMilestoneEIS, true);
+                SafeSetEnabled(btnMilestoneHOD, true);
+                SafeSetEnabled(btnSaveWeights, true);
             }
-
         }
 
 
@@ -3478,6 +3403,8 @@ namespace Forms {
 
 
         void RefreshAlertsGrid() {
+            if (dgvAlerts == nullptr) return;
+
 
             DataTable^ dtAlerts = gcnew DataTable();
 
@@ -3660,6 +3587,8 @@ namespace Forms {
 
 
         void RefreshSemestersAndCourses() {
+            if (dgvSemesters == nullptr || dgvCourses == nullptr) return;
+
 
             DataTable^ dtSem = gcnew DataTable();
 
@@ -3732,6 +3661,8 @@ namespace Forms {
 
 
         void RefreshStaffGrid() {
+            if (dgvStaff == nullptr) return;
+
 
             String^ activeSem = GetSelectedSemester();
 
@@ -3816,6 +3747,8 @@ namespace Forms {
 
 
         void RefreshOfferingsGrid() {
+            if (dgvOfferings == nullptr) return;
+
 
             String^ semFilter = GetSelectedSemester();
 
@@ -3878,6 +3811,8 @@ namespace Forms {
 
 
         void RefreshScriptsGrid() {
+            if (dgvScripts == nullptr) return;
+
 
             DataTable^ dt = gcnew DataTable();
 
@@ -3914,6 +3849,8 @@ namespace Forms {
 
 
         void RefreshMilestonesGrid() {
+            if (dgvMilestones == nullptr) return;
+
 
             String^ semFilter = GetSelectedSemester();
 
@@ -3976,6 +3913,8 @@ namespace Forms {
 
 
         void RefreshAuditGrid(String^ filter) {
+            if (dgvAudit == nullptr) return;
+
 
             DataTable^ dt = gcnew DataTable();
 
@@ -4036,6 +3975,8 @@ namespace Forms {
 
 
         void PopulateOfferingDropdowns() {
+            if (cmbOfferingSem == nullptr || cmbOfferingCourse == nullptr || cmbOfferingFirstEx == nullptr || cmbOfferingSecondEx == nullptr) return;
+
 
             cmbOfferingSem->Items->Clear();
 
